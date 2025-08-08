@@ -1,0 +1,7 @@
+
+*Select Query 5.
+
+select sp.sno,sp.qty from sp,p where sp.sno=p.sno and weight=(select MAX(weight) from p); 
+
+
+select s.sname,sp.qty from sp,s,p where sp.sno=p.sno and color="red"; 

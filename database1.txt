@@ -1,0 +1,51 @@
+# Database Creating.
+CREATE database mca0017;
+
+# Table Creating.
+CREATE table account (AccNo int(8),Amount decimal(10,2));
+
+# Insert Query.
+IINSERT into account values(1,1000);
+
+IINSERT into account values(2,2000);
+
+IINSERT into account values(3,3000);
+
+IINSERT into account values(4,4000);
+
+IINSERT into account values(5,5000);
+
+IINSERT into account values(6,6000);
+
+IINSERT into account values(7,7000);
+
+IINSERT into account values(8,8000);
+
+IINSERT into account values(9,9000);
+
+# Update Query.
+UPDATE account SET Amount='10000' WHERE AccNo='1'
+
+UPDATE account SET Amount='20000' WHERE AccNo='2'
+
+UPDATE account SET Amount='30000' WHERE AccNo='3'
+
+UPDATE account SET Amount='40000' WHERE AccNo='4'
+
+UPDATE account SET Amount='50000' WHERE AccNo='5'
+
+UPDATE account SET Amount='60000' WHERE AccNo='6'
+
+UPDATE account SET Amount='70000' WHERE AccNo='7'
+
+UPDATE account SET Amount='80000' WHERE AccNo='8'
+
+UPDATE account SET Amount='90000' WHERE AccNo='9'
+
+# Delete Query.
+DELETE FROM account WHERE AccNo='9'
+
+DELETE FROM account WHERE AccNo='8'
+
+
+

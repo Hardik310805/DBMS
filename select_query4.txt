@@ -1,0 +1,13 @@
+
+*Select Query.
+
+select pname from p where p_city="London"; 
+
+select pname from p where weight=(select max(weight)from p);
+
+select pno,pname from p where color="red";
+
+select s.sname,s.s_city from s join sp on s.sno=sp.sno where sp.qty>200; 
+
+select * from p where weight=(select MAX(weight)from p where weight < (select MAX(weight) from p));
+

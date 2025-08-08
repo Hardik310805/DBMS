@@ -1,0 +1,53 @@
+*dept table 1 
+
+create table dept(dept_id int(6) primary key,
+		  dept_name varchar(30),
+		  dept_location varchar(50));
+
+*insert query
+
+insert into dept(dept_id,dept_name,dept_location)values(1,'hr','bhavanagar');
+insert into dept(dept_id,dept_name,dept_location)values(2,'anlysis','jamnagar');
+insert into dept(dept_id,dept_name,dept_location)values(3,'testing','botad');
+
+
+*emp table 2
+
+CREATE TABLE emp (
+    emp_id int(6) primary key,
+    emp_name varchar(35),
+    emp_dept_id int(6),
+    emp_boss_id int(6),
+    emp_salary int(10),
+    foreign key (emp_dept_id) references dept(dept_id),
+    foreign key (emp_boss_id) references emp(emp_id));
+
+*insert query
+
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(1,'dhaval',1,3,15000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(2,'rathod',1,3,16000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(3,'hardik',1,3,60000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(4,'dixit',2,2,10000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(5,'paras',2,2,80000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(6,'prashant',2,2,40000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(7,'mohit',3,1,30000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(8,'dharmik',3,1,30000);
+insert into emp(emp_id,emp_name,emp_dept_id,emp_boss_id,emp_salary)values(9,'sandip',3,1,35000);
+
+
+update emp set emp_boss_id=2 where emp_id=4;
+update emp set emp_boss_id=2 where emp_id=5;
+update emp set emp_boss_id=2 where emp_id=6;
+update emp set emp_boss_id=1 where emp_id=7;
+update emp set emp_boss_id=1 where emp_id=8;
+update emp set emp_boss_id=1 where emp_id=9;
+
+
+
+
+
+
+
+
+
+
